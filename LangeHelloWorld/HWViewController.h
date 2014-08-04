@@ -10,4 +10,8 @@
 
 @interface HWViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *myLabel;
+
+- (IBAction)doBtnHide:(id)sender;
+
 @end

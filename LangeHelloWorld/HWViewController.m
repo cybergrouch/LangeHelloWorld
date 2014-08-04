@@ -18,6 +18,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSLog(@"Application loaded.");
 }
 
 - (void)didReceiveMemoryWarning
@@ -26,4 +28,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)doBtnHide:(id)sender {
+    [self changeTextOfLabel:@"Mabuhay!!!"];
+}
+
+- (void) changeTextOfLabel: (NSString *)myText {
+    self.myLabel.text = myText;
+}
 @end
