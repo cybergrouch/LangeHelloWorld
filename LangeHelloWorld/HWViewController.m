@@ -13,6 +13,7 @@
 @end
 
 @implementation HWViewController
+@synthesize lblHelloWorld;
 
 - (void)viewDidLoad
 {
@@ -29,11 +30,8 @@
 }
 
 - (IBAction)doBtnHide:(id)sender {
-    if (self.lblHelloWorld.hidden) {
-        self.lblHelloWorld.hidden = NO;
-    } else {
-        self.lblHelloWorld.hidden = YES;
-    }
+    [lblHelloWorld setHidden:![lblHelloWorld isHidden]];
+    [sender setTitle:[lblHelloWorld isHidden] ? @"Show" : @"Hide" forState:UIControlStateNormal];
 }
 
 @end
