@@ -29,10 +29,11 @@
 }
 
 - (IBAction)doBtnHide:(id)sender {
-    [self changeTextOfLabel:@"Mabuhay!!!"];
+    if (self.lblHelloWorld.hidden) {
+        self.lblHelloWorld.hidden = NO;
+    } else {
+        self.lblHelloWorld.hidden = YES;
+    }
 }
 
-- (void) changeTextOfLabel: (NSString *)myText {
-    self.myLabel.text = myText;
-}
 @end

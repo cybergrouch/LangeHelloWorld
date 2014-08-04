@@ -10,7 +10,8 @@
 
 @interface HWViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *myLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lblHelloWorld;
+@property (weak, nonatomic) IBOutlet UIButton *btnShowHide;
 
 - (IBAction)doBtnHide:(id)sender;
 
